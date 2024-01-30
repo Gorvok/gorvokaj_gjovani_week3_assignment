@@ -37,7 +37,7 @@ Follow these steps to get your development environment running:
     Make sure your MySQL service is running.
     Use the Sequelize CLI to create the database and migrate the models:
 4. **Terminal**
-   ``sh
+   ```sh
    npx sequelize db:create
    npx sequelize db:migrate
 
