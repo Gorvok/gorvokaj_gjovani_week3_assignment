@@ -26,7 +26,8 @@ Follow these steps to get your development environment running:
 
 1. **Install the required packages**
 
-npm install
+   ```sh
+   npm install
 
 2. **Set up your environment variables**
 
@@ -36,8 +37,9 @@ npm install
     Make sure your MySQL service is running.
     Use the Sequelize CLI to create the database and migrate the models:
 4. **Terminal**
-npx sequelize db:create
-npx sequelize db:migrate
+   ``sh
+   npx sequelize db:create
+   npx sequelize db:migrate
 
 5. **Start the application**
 npm start
