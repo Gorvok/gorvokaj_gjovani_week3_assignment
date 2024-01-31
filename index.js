@@ -7,6 +7,9 @@ const app           = express()
 // Parse incoming requests with JSON payloads
 app.use(express.json());
 
+app.set('views', __dirname + '/views');
+app.set('view engine', 'twig');
+
 // Load in our RESTful routers
 const planetRouter  = require(`./routers/planet.js`)
 const starRouter    = require(`./routers/star.js`)
@@ -14,7 +17,9 @@ const galaxyRouter  = require(`./routers/galaxy.js`)
 
 // Home page
 app.get('/', (req, res) => {
-  res.status(200).send('Welcome to Star Tracker Library')
+  res.render('layouts/main', {
+    name: "Gjovani"
+  })
 })
 
 // Register our RESTful routers with our "app"
